@@ -1,0 +1,14 @@
+{
+  "_comment": "Copy this file to appsettings.Development.json (gitignored) and fill in your own local dev values. Never commit real credentials.",
+  "ConnectionStrings": {
+"Default": "Server=localhost,1433;Database=One77;Trusted_Connection=True;TrustServerCertificate=True;"
+  },
+  "Jwt": {
+    "SigningSecret": "CHANGE_ME_ANY_LOCAL_DEV_ONLY_VALUE"
+  },
+  "InitialAdmin": {
+    "_comment": "Optional. Set once to seed a local dev admin account; safe to leave blank after that (EnsureSeedAdminAsync no-ops once any admin exists).",
+    "Email": "",
+    "Password": ""
+  }
+}

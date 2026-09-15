@@ -1,0 +1,13 @@
+@if (!isAdminRoute()) {
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <app-header />
+}
+
+<main id="main-content" [class.public-root]="!isAdminRoute()">
+  <router-outlet />
+</main>
+
+@if (!isAdminRoute()) {
+  <app-footer />
+  <app-cart-drawer />
+}

@@ -1,0 +1,25 @@
+# .NET build artifacts
+bin/
+obj/
+*.user
+
+# Local secrets — never commit real connection strings/credentials.
+# Copy the .example file and fill in local-only values instead.
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.local.json
+**/appsettings.Development.json
+**/appsettings.Local.json
+
+# Angular (reserved for Milestone 8+)
+node_modules/
+dist/
+.angular/
+
+# Locally uploaded homepage hero media (DevHost's default media root) —
+# never a deployment artifact, never committed.
+backend/src/One77.Api.DevHost/media/
+
+# OS/editor cruft
+.DS_Store
+*.swp
