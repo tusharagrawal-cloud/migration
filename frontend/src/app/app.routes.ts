@@ -7,6 +7,10 @@ import { LearnLandingPage } from './features/learn/learn-landing-page';
 import { LearnCategoryPage } from './features/learn/learn-category-page';
 import { LearnEntryPage } from './features/learn/learn-entry-page';
 import { WebinarPage } from './features/webinar/webinar-page';
+import { TermsPage } from './features/policies/terms-page';
+import { PrivacyPage } from './features/policies/privacy-page';
+import { RefundPage } from './features/policies/refund-page';
+import { AboutPage } from './features/policies/about-page';
 import { NotFoundPage } from './features/not-found/not-found-page';
 import { authGuard } from './admin/core/auth.guard';
 
@@ -56,6 +60,11 @@ export const routes: Routes = [
   { path: 'learn/:slug/:entryId', component: LearnEntryPage, title: 'Learn — ONE77 Sports' },
 
   { path: 'webinar', component: WebinarPage, title: 'Webinars — ONE77 Sports' },
+
+  { path: 'terms', component: TermsPage, title: 'Terms & Conditions — ONE77 Sports' },
+  { path: 'privacy', component: PrivacyPage, title: 'Privacy Policy — ONE77 Sports' },
+  { path: 'refund', component: RefundPage, title: 'Refund Policy — ONE77 Sports' },
+  { path: 'about', component: AboutPage, title: 'About Us — ONE77 Sports' },
 
   {
     path: 'admin/login',

@@ -1,7 +1,7 @@
 {
   "_comment": "Copy this file to appsettings.Development.json (gitignored) and fill in your own local dev values. Never commit real credentials.",
   "ConnectionStrings": {
-"Default": "Server=localhost,1433;Database=One77;Trusted_Connection=True;TrustServerCertificate=True;"
+    "Default": "Server=localhost,1433;Database=One77;Trusted_Connection=True;TrustServerCertificate=True;"
   },
   "Jwt": {
     "SigningSecret": "CHANGE_ME_ANY_LOCAL_DEV_ONLY_VALUE"
@@ -10,5 +10,25 @@
     "_comment": "Optional. Set once to seed a local dev admin account; safe to leave blank after that (EnsureSeedAdminAsync no-ops once any admin exists).",
     "Email": "",
     "Password": ""
+  },
+  "Shopify": {
+    "_comment": "From the webhook's setup screen in Shopify Admin (Settings > Notifications > Webhooks), or the 'secret' Shopify returns when the webhook is created via the Admin API.",
+    "WebhookSecret": ""
+  },
+  "Notifications": {
+    "_comment": "Set WhatsAppEnabled/SmsEnabled to false individually to test one channel at a time without touching the other's config.",
+    "WhatsApp": {
+      "_comment": "PhoneNumberId + AccessToken come from Meta Business Manager > WhatsApp Manager > API Setup. TemplateName must be an APPROVED template (see README-order-notifications.md).",
+      "PhoneNumberId": "",
+      "AccessToken": ""
+    },
+    "Sms": {
+      "_comment": "From your loadcrm.com account. EntityId/TemplateId are your DLT-registered IDs; MessageTemplate's wording must match what's registered against TemplateId on the DLT portal exactly (only {0}/{1}/{2} may vary).",
+      "AuthKey": "",
+      "UserName": "trial",
+      "SenderId": "",
+      "EntityId": "",
+      "TemplateId": ""
+    }
   }
 }
